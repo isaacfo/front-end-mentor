@@ -1,0 +1,93 @@
+.main-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  font-weight: normal;
+  /* first number in margin = top/bottom and second = left/right 
+  padding works the same way*/
+  margin: 60px 0;
+  text-align: center;
+}
+
+.story-title {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 30px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.story-text {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.story {
+  border: 1px solid #333;
+  padding: 5px;
+}
+
+.quarter {
+  width: 25%;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.half {
+  width: 50%;
+}
+
+.story-image {
+  width: 100%;
+}
+
+.three-quarter {
+  width: 75%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  width: 100%;
+  /* flex makes the nav-items take up 20% each because there is 5 of them. would adjust accordingly if there was 4 and etc. */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  font-size: 30px;
+
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #555;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+.nav-item:nth-child(1) {
+  background-color: #ffeaa7;
+}
+.nav-item:nth-child(2) {
+  background-color: #81ecec;
+}
+.nav-item:nth-child(3) {
+  background-color: #55efc4;
+}
+.nav-item:nth-child(4) {
+  background-color: #74b9ff;
+}
+.nav-item:nth-child(5) {
+  background-color: #a29bfe;
+}

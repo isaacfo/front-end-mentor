@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+html {
+  /* default font-size for html is 16px,
+  rem is based on that
+   1 rem = 16px, rem multiples whatever the font-size is set to by 10
+   Setting HTML font size at the top of CSS document to 62.5% makes each whole rem 10px, making it easier to adjust the sizes of things in CSS ex. 1.5 rem = 15px, could also just manually set font-size to be 10px instead of the whole 62.5%
+   rem also allows for the font to shrink or grow with adjustments made to the browser settings, it won't with pixels 
+   rem can also be used on other things beyond font but it still takes its number from the set html font size*/
+
+  /* em is equal to the number/font-size fo th parent element
+   e.g .box = font-size 30px then padding is set to 1em which equals 30px as well
+   em will act like rem if no parent element style exists */
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(214, 212, 212);
+  font-family: 'Karla', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-content-container {
+  background-color: #fff;
+  min-width: 80rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+  /* overflow hidden for allowing the border radus to show on the bottom section. the section overlaps the border, so hidden stops that and helps apply the border-radius on it*/
+  overflow: hidden;
+}
+
+section {
+  padding: 35px;
+}
+
+section.cyan {
+  background-color: hsl(179, 62%, 43%);
+  color: #fff;
+}
+
+section.light-cyan {
+  background-color: hsl(179, 47%, 52%);
+  color: #fff;
+}
+
+/* to get the green sections side by side we added a div with class of row and then applied the below */
+.row {
+  display: flex;
+}
+
+/* > = get all the sections that are direct children of the row class */
+.row > section {
+  flex: 1;
+}
+
+.main-title {
+  color: hsl(179, 62%, 43%);
+  font-size: 3rem;
+}
+
+.second-title {
+  font-size: 2rem;
+  color: hsl(71, 73%, 54%);
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+p.first-section-p {
+  color: #999;
+}
+
+h3 {
+  font-size: 1.9rem;
+}
+
+.money-big {
+  color: hsl(179, 43%, 75%);
+  /* to get the per month in the middle ish and to the right of the number with margin-right on the span */
+  display: flex;
+  align-items: center;
+}
+
+.money-big span {
+  font-size: 4rem;
+  color: #fff;
+  margin-right: 10px;
+}
+
+button {
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  cursor: pointer;
+  /* cuz buttons usually dont take the font listed for body */
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  outline: none;
+  padding: 1.7rem 0;
+  width: 100%;
+}
+
+ul {
+  font-size: 1.4rem;
+  list-style-type: none;
+  padding: 0;
+  opacity: 0.5;
+}
+
+ul li {
+  line-height: 2.3rem;
+}
