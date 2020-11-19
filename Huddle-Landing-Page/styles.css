@@ -13,7 +13,7 @@ html {
 
 body {
   background-color: hsl(257, 40%, 49%);
-  background-image: url(/FrontEnd-masters/Huddle-Landing-Page/images/bg-desktop.svg);
+  background-image: url(images/bg-desktop.svg);
   background-repeat: no-repeat;
   /* cover- to stretch the image and prevent blank spaces where the image may not reach */
   background-size: cover;
