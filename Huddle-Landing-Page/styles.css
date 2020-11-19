@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(/FrontEnd-masters/Huddle-Landing-Page/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  /* cover- to stretch the image and prevent blank spaces where the image may not reach */
+  background-size: cover;
+  color: #fff;
+
+  font-family: 'Open Sans', sans-serif;
+  /* 100vh- also helps center the bg image better and cover better */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+main {
+  margin: auto;
+  max-width: 100%;
+  width: 120rem;
+}
+
+.mockup-image {
+  /* made the image shrink to allow equal space for each section in the main */
+  max-width: 100%;
+}
+
+.main-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.flex-row {
+  display: flex;
+  margin: 10rem;
+}
+
+.flex-row > section:first-child {
+  flex: 0.6;
+  margin-right: 2rem;
+}
+
+.flex-row > section:last-child {
+  flex: 0.4;
+  margin-left: 2rem;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  font-size: 1.8rem;
+  color: hsl(257, 40%, 49%);
+  padding: 1.5rem 6rem;
+  border-radius: 5rem;
+}
+
+.social-links {
+  display: flex;
+  /* to get icons to the fight side */
+  justify-content: flex-end;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-links a {
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  /* inline flex - to give the a tags box model stats like height,width,padding,margin */
+  display: inline-flex;
+  /* to center the icons in the border */
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  /* to change the size of the border/circle */
+  height: 5rem;
+  width: 5rem;
+  text-decoration: none;
+}
+
+.fab {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .logo {
+    margin-left: 8rem;
+    width: 20rem;
+  }
+  .flex-row {
+    flex-direction: column;
+  }
+
+  .flex-row > section:first-child {
+    /* flex: 1; */
+  }
+
+  .flex-row > section:last-child {
+    /* flex: 1; */
+    text-align: center;
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
